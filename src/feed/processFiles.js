@@ -15,7 +15,7 @@ async function processFile(file, options, items) {
     const fileUrl = getFileUrl(file, options);
     log(`Loading html as if from url: ${fileUrl}`);
 
-    const html = await fs.promises.readFile(file, 'utf8'); // TODO - file encoding option
+    const html = await fs.promises.readFile(path.join(options.inputDir, file), 'utf8'); // TODO - file encoding option
     const dom = new JSDOM(html, {
         url: fileUrl
     });
