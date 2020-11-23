@@ -53,7 +53,7 @@ For example, to scan the contents of your `/dist` folder and output an RSS file 
 
 Now we have genrss running, we need to tell it what content to include in the RSS feed. By default no content will be included and genrss will generate an RSS file with no entries.
 
-To include some html content it needs to be wrapped in a single html element. Your html structure may already have an appropriate element and if so you should use that, but if not it's normally possible to wrap content in a `<span>...</span>` without affecting the layout of the page (some caveats do however apply).
+To include some html content from your site's html it needs to be wrapped in a single html element. Your html structure may already have an appropriate element and if so you should use that, but if not it's normally possible to wrap content in a `<span>...</span>` without affecting the layout of the page (some caveats do however apply).
 
 The element must have an attribute `data-feed-id` set to some value, uniquely chosen for this feed entry. Further attributes can then be specified on the element to provide information about the feed entry, the full list of supported attributes is
 
@@ -65,7 +65,7 @@ The element must have an attribute `data-feed-id` set to some value, uniquely ch
 So for example you may have something like
 
 ```html
-<div data-feed-i`="mythoughtsonthenatureofexistence" 
+<div data-feed-id="mythoughtsonthenatureofexistence" 
      data-feed-title="My thoughts on the nature of existence" 
      data-feed-date="10 Apr 2010">
     It seems that the physical world is merely a view on the underlying logic that determines it. Should the 
