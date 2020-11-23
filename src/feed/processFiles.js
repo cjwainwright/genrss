@@ -58,8 +58,13 @@ function processFeedElement(element, fileUrl) {
 
     //  make all links absolute
     element.querySelectorAll('[href]').forEach(link => {
-        log(`Making link absolute: ${link.getAttribute('href')} => ${link.href}`)
+        log(`Making href absolute: ${link.getAttribute('href')} => ${link.href}`)
         link.setAttribute('href', link.href);
+    });
+
+    element.querySelectorAll('[src]').forEach(resource => {
+        log(`Making src absolute: ${resource.getAttribute('src')} => ${resource.src}`)
+        resource.setAttribute('src', resource.src);
     });
 
     return {
