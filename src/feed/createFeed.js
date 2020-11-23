@@ -45,7 +45,7 @@ module.exports = async function createFeed(options, items) {
         ]
     };
 
-    const rss = xml(feedXmlObj);
+    const rss = xml(feedXmlObj, { declaration: true });
 
     const output = path.join(options.outputDir, options.outputFile);
     log(`Writing feed xml to ${output}`)
