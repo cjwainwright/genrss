@@ -1,0 +1,11 @@
+
+{
+    "inputDir": "./",
+    "inputFiles": ["**/*.html", "**/*.htm"],
+    "outputDir": "./",
+    "outputFile": "rss.xml",
+    "itemCount": 10,
+    "title": null,
+    "description": null,
+    "url": null
+}
