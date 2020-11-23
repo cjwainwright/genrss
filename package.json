@@ -1,6 +1,6 @@
 {
   "name": "genrss",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Generate RSS feeds for static sites",
   "main": "src/index.js",
   "bin": "src/cli.js",
