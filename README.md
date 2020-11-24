@@ -1,5 +1,8 @@
 # genrss
 
+![CI build](https://github.com/cjwainwright/genrss/workflows/CI%20build/badge.svg)
+![Publish](https://github.com/cjwainwright/genrss/workflows/Publish/badge.svg)
+
 genrss (pronounced "Generous, err... S. Generous-s... Well, something like that!") is an RSS generator for static sites. It scans through the HTML files looking for content marked for inclusion in the RSS feed. Output is a valid RSS xml file, with entries sorted by date, truncated to a configurable number. The RSS file can then be included as part of your static site.
 
 ## Installation and setup
