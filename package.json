@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "bin": "src/cli.js",
   "scripts": {
+    "test": ""
   },
   "keywords": [
     "RSS",
