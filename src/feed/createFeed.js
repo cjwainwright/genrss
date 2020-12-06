@@ -48,7 +48,8 @@ module.exports = async function createFeed(options, items) {
     const rss = xml(feedXmlObj, { declaration: true });
 
     const output = path.join(options.outputDir, options.outputFile);
-    log(`Writing feed xml to ${output}`)
+    log(`Writing feed xml to ${output}`);
+    await fs.promises.mkdir(path.dirname(output), { recursive: true });
     await fs.promises.writeFile(output, rss, 'utf8');
 };
 

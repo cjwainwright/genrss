@@ -1,11 +1,11 @@
 {
   "name": "genrss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate RSS feeds for static sites",
   "main": "src/index.js",
   "bin": "src/cli.js",
   "scripts": {
-    "test": ""
+    "test": "jasmine --config=jasmine.json"
   },
   "keywords": [
     "RSS",
@@ -22,5 +22,9 @@
     "glob": "^7.1.6",
     "jsdom": "^16.4.0",
     "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "jasmine": "^3.6.3",
+    "xml2js": "^0.4.23"
   }
 }

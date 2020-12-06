@@ -3,7 +3,7 @@ const defaultOptions = require('./defaultOptions.json');
 const fileUtils = require('../utils/file.js');
 const log = require('../utils/log.js');
 
-module.exports = async function buildOptions() {
+module.exports = async function buildOptions(runtimeOptions) {
     const configFile = path.join(process.cwd(), 'genrss.json');
     log(`Checking for config file: ${configFile}`);
     let userOptions = null;
@@ -14,7 +14,7 @@ module.exports = async function buildOptions() {
         log('Running with default options');
     }
 
-    const options = { ...defaultOptions, ...userOptions };
+    const options = { ...defaultOptions, ...userOptions, ...runtimeOptions };
 
     if(options.url == null) {
         throw new Error('Url must be specified. Please ensure that you have set the url property in your genrss.json configuration file');
